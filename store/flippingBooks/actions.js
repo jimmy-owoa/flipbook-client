@@ -7,10 +7,10 @@ export async function fetchFlippingBooks({ commit }) {
   } finally {}
 }
 
-export async function fetchFlippingBook({ commit }, slug) {
+export async function fetchFlippingBook({ commit }, id) {
   try {
-    const { data } = await this.$axios(`posts_video/post?slug=${slug}`);
-    commit("setFlippingBookPost", data);
+    const { data } = await this.$axios.get(`flipping_books/${id}`);
+    commit("setFlippingBook", data);
   } catch (e) {
     commit("FlippingBooksError", e.message);
   } finally {}
