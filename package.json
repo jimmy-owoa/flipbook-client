@@ -1,7 +1,7 @@
 {
   "name": "flip-book",
   "version": "1.0.0",
-  "description": "Images to flipbook",
+  "description": "Images to FlippingBook",
   "author": "Jeremías",
   "private": true,
   "scripts": {

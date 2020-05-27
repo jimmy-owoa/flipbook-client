@@ -1,6 +1,6 @@
 # flip-book
 
-> Images to flipbook
+> Images to FlippingBook
 
 ## Build Setup
 
