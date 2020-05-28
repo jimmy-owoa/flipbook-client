@@ -1,6 +1,7 @@
 <template>
   <div>
-    <v-btn color="green" dark fab to="/flipping-books/new">
+    <v-flex display-1 text-md-center pb-4>Listado de Flipping Books</v-flex>
+    <v-btn color="green" dark fab small to="/flipping-books/new">
       <v-icon color="white">mdi-plus</v-icon>
     </v-btn>
 
