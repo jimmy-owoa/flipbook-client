@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-flex display-1 text-md-center pb-4>Listado de Flipping Books</v-flex>
-    <v-btn color="green" dark fab small to="/flipping-books/new">
+    <v-btn color="green" dark fab small nuxt to="/flipping-books/new">
       <v-icon color="white">mdi-plus</v-icon>
     </v-btn>
 
@@ -15,7 +15,7 @@
             <v-card-subtitle class="pb-0">Páginas: {{fb.pages}}</v-card-subtitle>
 
             <v-card-actions>
-              <v-btn color="green" text block :to="`/flipping-books/${fb.id}`">Ver</v-btn>
+              <v-btn color="green" text block nuxt :to="`/flipping-books/${fb.id}`">Ver</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>

@@ -18,7 +18,7 @@
               >mdi-arrow-right</v-icon>
             </div>
           </flipbook>
-          <v-btn to="/flipping-books">Volver</v-btn>
+          <v-btn nuxt to="/flipping-books">Volver</v-btn>
         </v-flex>
       </v-layout>
     </v-row>
