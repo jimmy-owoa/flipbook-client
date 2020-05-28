@@ -54,7 +54,9 @@ export default {
         formData.append("flipping_book[images][" + i + "]", image);
       }
       try {
+        this.loading = true;
         const res = await this.$axios.post("flipping_books", formData);
+        this.loading = false;
         this.$router.push("/flipping-books");
         alert("Flipping book creado exitosamente")
       } catch (error) {
