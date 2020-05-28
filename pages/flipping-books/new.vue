@@ -37,20 +37,25 @@ export default {
     };
   },
   methods: {
-    async onUpload() {
-      this.loading = true;
+    onUpload() {
+      this.loading = false;
       const formData = new FormData();
       formData.append("flipping_book[name]", this.name);
       formData.append("flipping_book[description]", this.value);
       formData.append("flipping_book[file]", this.file);
-      this.images.forEach(image => formData.append("flipping_book[images]", image));
-      try {
-        const res = await this.$axios.post("flipping_books", formData);
-        this.loading = false;
-      } catch (error) {
-        console.log(error);
-        this.loading = false;
+      for (var i = 0; i < this.images.length; i++) {
+        let image = this.images[i];
+        console.log(image);
+        formData.append("flipping_book[images][" + i + "]", image);
       }
+      
+      // this.images.forEach(image => {
+      //   let count = 0;
+      //   formData.append(`flipping_book[images]['${count}']`, image);
+      //   count++;
+      // });
+      // formData.append("flipping_book[images]", this.images)
+      this.$axios.post("flipping_books", formData);
     }
   }
 };

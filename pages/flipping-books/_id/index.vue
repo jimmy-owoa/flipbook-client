@@ -1,11 +1,11 @@
 <template>
   <div>
-   <show :fb="getFlippingBook"/>
+   <show :fb="this.selectedFlippingBook" v-if="this.selectedFlippingBook"/>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapState } from "vuex";
 import Show from "~/components/flippingBooks/Show"
 export default {
   components:{
@@ -15,7 +15,7 @@ export default {
     ...mapActions("flippingBooks", ["fetchFlippingBook"])
   },
   computed:{
-    ...mapGetters("flippingBooks", ["getFlippingBook"])
+    ...mapState("flippingBooks", ["selectedFlippingBook"])
   },
   mounted(){
     this.fetchFlippingBook(this.$route.params.id)

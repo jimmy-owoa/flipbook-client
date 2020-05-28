@@ -31,12 +31,13 @@ export default {
   */
   plugins: [
     "~/plugins/axios",
+    {src: "~/plugins/flipbook", mode: 'client'},
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Nuxt.js modules
