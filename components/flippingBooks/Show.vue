@@ -4,9 +4,6 @@
       <v-col cols="12" sm="12">
         <v-flex headline>{{fb.name}}</v-flex>
       </v-col>
-      <v-col cols="12" sm="12">
-        <v-btn :href="fb.file">Ver pdf</v-btn>
-      </v-col>
       <v-layout fill-height >
         <v-flex style="background-color: grey;" >
           <flipbook class="flipbook" :pages="fb.images" v-slot="flipbook">
@@ -21,6 +18,7 @@
               >mdi-arrow-right</v-icon>
             </div>
           </flipbook>
+          <v-btn to="/flipping-books">Volver</v-btn>
         </v-flex>
       </v-layout>
     </v-row>
