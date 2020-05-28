@@ -40,6 +40,10 @@ export default {
   methods: {
     async onUpload() {
       this.loading = false;
+      if (!this.file){
+        alert("Debe adjuntar un archivo PDF");
+        return
+      }
       const formData = new FormData();
       formData.append("flipping_book[name]", this.name);
       formData.append("flipping_book[description]", this.value);
